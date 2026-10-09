@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Submit and review a blood requirement request with the Lifora network.">
+  <title>Blood Request | Lifora</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css"><link rel="stylesheet" href="css/responsive.css">
+  <script src="js/bloodbank.js" defer></script>
+</head>
+<body>
+  <header class="site-header"><a class="brand" href="index.html?explore=1"><span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 40 40"><path d="M20 5v30M5 20h30"/><circle cx="20" cy="20" r="16"/></svg></span><span class="brand-copy"><strong>lifora<span>.</span></strong><small>BLOOD DONOR NETWORK</small></span></a><button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open navigation"><span></span><span></span></button><nav class="site-nav" id="site-nav" aria-label="Main navigation"><a href="departments.html">Blood availability</a><a href="doctors.html">Donation centres</a><a href="about.html">Our mission</a><a href="contact.html">Contact</a><a class="nav-login" href="login.html">Donor portal <span>↗</span></a><a class="button button-small" href="register.html">Become a donor <span>↗</span></a></nav></header>
+  <main>
+    <section class="inner-hero"><div class="section-wrap"><p class="eyebrow">Blood requirement request</p><h1>Help us find a <em>match.</em></h1><p>Share the required blood group and registered hospital details. A request is not a stock reservation; the blood bank must confirm availability.</p><div class="breadcrumbs"><a href="index.html?explore=1">Home</a><span>/</span><span>Blood request</span></div></div></section>
+    <section class="section-wrap portal-layout appointment-page-layout">
+      <div class="page-form-column">
+        <form class="appointment-form light-form" id="blood-request-form">
+          <div class="form-header"><span class="form-step">PATIENT BLOOD REQUEST</span><span class="form-privacy">Demo record <span>◇</span></span></div>
+          <div class="form-row"><label>Requester name<input name="name" autocomplete="name" placeholder="Your full name" required minlength="2"></label><label>Contact phone<input name="phone" autocomplete="tel" type="tel" placeholder="Contact number" required pattern="[0-9+() .-]{7,20}"></label></div>
+          <div class="form-row"><label>Email address<input name="email" type="email" autocomplete="email" placeholder="you@example.com" required></label><label>Blood group<select name="bloodGroup" id="request-blood-group" required><option value="" disabled selected>Select group</option><option>A+</option><option>A-</option><option>B+</option><option>B-</option><option>AB+</option><option>AB-</option><option>O+</option><option>O-</option></select></label></div>
+          <div class="form-row"><label>Units required<select name="units" required><option value="" disabled selected>Select units</option><option value="1">1 unit</option><option value="2">2 units</option><option value="3">3 units</option><option value="4">4 units</option></select></label><label>Priority<select name="priority" required><option value="Urgent">Urgent</option><option value="Routine">Routine</option></select></label></div>
+          <div class="form-row"><label>Hospital / blood bank<input name="hospital" placeholder="Registered facility name" required></label><label>City<input name="city" autocomplete="address-level2" placeholder="City or district" required></label></div>
+          <label>Needed by<input name="neededBy" id="request-date" type="date" required></label>
+          <label>Additional details <span class="optional-label">OPTIONAL</span><textarea name="notes" rows="3" placeholder="Anything the blood-bank team should know"></textarea></label>
+          <button class="button form-submit" type="submit">Submit blood request <span>↗</span></button><p class="form-message" id="request-form-message" role="status" aria-live="polite"></p>
+          <p class="form-footnote">Demo only. In a real emergency, contact the hospital and licensed blood bank directly.</p>
+        </form>
+      </div>
+      <aside class="appointment-aside"><p class="eyebrow">Request checklist</p><h2>Help the team respond.</h2><p>Requests should come from a patient or authorised attendant and include a registered hospital or blood bank.</p><div class="aside-rule"></div><strong>Keep the details handy</strong><p>Blood group, units needed, hospital contact, and required date help the team check stock.</p><a class="text-link" href="departments.html">Check demo inventory <span>↗</span></a><div class="privacy-note"><span>◇</span><p>Do not enter real patient medical information in this browser prototype.</p></div></aside>
+    </section>
+    <section class="section-wrap saved-appointments-section"><div class="section-heading"><div><p class="eyebrow">Local demo activity</p><h2>Requests in <em>this browser.</em></h2></div><p>Request details are shown only as a workflow demonstration. Staff should verify every request directly.</p></div><div id="blood-request-list" class="record-list" aria-live="polite"></div></section>
+  </main>
+  <footer class="site-footer"><div class="footer-main section-wrap"><a class="brand footer-brand" href="index.html?explore=1"><span class="brand-mark"><svg viewBox="0 0 40 40"><path d="M20 5v30M5 20h30"/><circle cx="20" cy="20" r="16"/></svg></span><span class="brand-copy"><strong>lifora<span>.</span></strong><small>BLOOD DONOR NETWORK</small></span></a><p>Every drop connects us.<br>For every life, together.</p><div class="footer-contact"><span>COMMUNITY SUPPORT</span><a href="tel:+911800000000">1800-000-0000</a><a href="contact.html">Contact the team</a></div></div><div class="footer-bottom section-wrap"><span>© 2026 Lifora Community Network.</span><span class="prototype-note">DBMS PBL · Front-end prototype</span></div></footer>
+</body></html>
